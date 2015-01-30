@@ -133,15 +133,15 @@ DateFormat.dateHelpers = {
   },
 
   getMeridianUpper: function(date) {
-    return (date.getMonth() > 12) ? 'PM' : 'AM';
+    return (date.getHours() > 12) ? 'PM' : 'AM';
   },
 
   getMeridianLower: function(date) {
-    return (date.getMonth() > 12) ? 'pm' : 'am';
+    return (date.getHours() > 12) ? 'pm' : 'am';
   },
 
   getAbbreviatedMeridianLower: function(date) {
-    return (date.getMonth() > 12) ? 'p' : 'a';
+    return (date.getHours() > 12) ? 'p' : 'a';
   },
 
   getMinuteSeconds: function(date) {
