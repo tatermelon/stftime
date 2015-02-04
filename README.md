@@ -1,4 +1,4 @@
-# stftime
+# stritime
 
 
 DateFormat.strftime is a helper method for formatting dates/times
