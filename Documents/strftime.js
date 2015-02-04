@@ -119,7 +119,9 @@ DateFormat.dateHelpers = {
   },
 
   get12Hour: function(date) {
-    return date.getHours() % 12;
+    var hours = date.getHours();
+    if (hours === 12 || hours === 0) return 12;
+    else return hours % 12;
   },
 
   getMonthNum: function(date) {
@@ -133,15 +135,15 @@ DateFormat.dateHelpers = {
   },
 
   getMeridianUpper: function(date) {
-    return (date.getHours() > 12) ? 'PM' : 'AM';
+    return (date.getHours() >= 12) ? 'PM' : 'AM';
   },
 
   getMeridianLower: function(date) {
-    return (date.getHours() > 12) ? 'pm' : 'am';
+    return (date.getHours() >= 12) ? 'pm' : 'am';
   },
 
   getAbbreviatedMeridianLower: function(date) {
-    return (date.getHours() > 12) ? 'p' : 'a';
+    return (date.getHours() >= 12) ? 'p' : 'a';
   },
 
   getMinuteSeconds: function(date) {
