@@ -120,8 +120,12 @@ DateFormat.dateHelpers = {
 
   get12Hour: function(date) {
     var hours = date.getHours();
-    if (hours === 12 || hours === 0) return 12;
-    else return hours % 12;
+
+    if (hours === 12 || hours === 0) {
+      return 12;
+    } else {
+      return hours % 12;
+    }
   },
 
   getMonthNum: function(date) {
